@@ -11,29 +11,35 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('My First App'),
         centerTitle: true,
-        backgroundColor: Colors.red[600],
+        backgroundColor: Colors.blue[600],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-        Container(
-          padding: EdgeInsets.all(20),
-          color: Colors.red,
-          child: Text('One'),
+      body: Row(children: [
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            color: Colors.blue,
+            child: Text('One'),
+          ),
         ),
-        Container(
-          padding: EdgeInsets.all(30),
-          color: Colors.blue,
-          child: Text('Two'),
+        Expanded(
+          flex: 3,
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            color: Colors.orange,
+            child: Text('Two'),
+          ),
         ),
-        Container(
-          padding: EdgeInsets.all(40),
-          color: Colors.yellow,
-          child: Text('Three'),
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            color: Colors.red,
+            child: Text('Two'),
+          ),
         ),
-      ],
-      ),
+        
+      ]),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
         backgroundColor: Colors.red[600],
